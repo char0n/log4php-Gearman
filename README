@@ -1,0 +1,33 @@
+log4php-Gearman
+===============
+log4php-Gearman is log4php appender to Gearman job server.
+log4php-Gearman is using gearman-php driver - http://docs.php.net/manual/en/book.gearman.php
+
+Requirements
+============
+- 5.x > required
+- php Gearman driver
+- php JSON
+- tested against Gearman 0.13
+
+Configuration
+=============
+Example appender XML configuration::
+
+<appender name="GearmanAppender" class="LoggerAppenderGearman" threshold="WARN">
+  <!-- Gearman connection options, for multiple hosts use comma separated format "localhost:4730,127.0.0.1:4730" -->
+  <hosts value="localhost:4730" /> 
+  <gearmanTaskName value="log4php_logging_event" />
+</appender>
+
+Author
+======
+char0n (Vladimir Gorej) <gorej@mortality.sk>
+
+References
+==========
+[1] http://gearman.org/
+[2] http://logging.apache.org/log4php/
+[3] http://docs.php.net/manual/en/book.gearman.php
+[4] http://pecl.php.net/package/gearman
+[5] http://pecl.php.net/package/json
