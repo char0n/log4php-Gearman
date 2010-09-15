@@ -5,7 +5,8 @@ log4php-Gearman is using gearman-php driver - http://docs.php.net/manual/en/book
 
 Requirements
 ============
-- 5.x > required
+- log4php
+- php 5.x > required
 - php Gearman driver
 - php JSON
 - tested against Gearman 0.13
